@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* Helpers and Settings */
+@import "settings";
+
+/* img */
+$imgpath: "../img/";
+$picpath: "../pictures/";
+
+/* Main Libraries */
+@import "normalize";
+@import "foundation/components/global"; 
+@import "foundation/components/grid";
+@import "foundation/components/orbit";
+
+/* General Elements */
+@import "general/helpers/mixins";
+@import 'general/images';
+@import 'general/elements';
+@import 'general/content';
+@import 'general/layout/header';
+@import 'general/layout/body';
+@import 'general/layout/footer';
+ 
+/* step */
+
+
+/* ie8 */
+@import 'general/ie';
