@@ -1,3 +1,16 @@
 {
-    
+    "slider": [
+        {
+            "url": "pictures/slider/img-1.jpg"
+        },
+        {
+            "url": "pictures/slider/img-2.jpg"
+        },
+        {
+            "url": "pictures/slider/img-1.jpg"
+        },
+        {
+            "url": "pictures/slider/img-2.jpg"
+        }
+    ]
 }

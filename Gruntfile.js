@@ -74,6 +74,7 @@ module.exports = function (grunt) {
                     [
                         'app/js/vendor/modernizr.js',
                         'bower_components/jquery/jquery.min.js',
+                        'app/js/vendor/jquery.sequence-min.js',
                         'app/js/app/app.js'
                     ]
                 }
