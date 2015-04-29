@@ -1,3 +1,46 @@
 .row {
     //outline: 1px solid #000;
 }
+
+// top image
+.top-image {
+    position: relative;
+    margin-top: -79px;
+    height: 500px;
+    background-position: center !important;
+    background-size: cover !important;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: image-url('pattern2.png');
+        background-position: 0 18px;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+// title page
+.title-page {
+    margin: -319px auto 10px;
+    color: #fff;
+    position: relative;
+    z-index: 12;
+}
+
+// content holder
+.content-holder {
+    background: #fff;
+    position: relative;
+    z-index: 12;
+    padding: 40px 32px;
+    min-height: 400px;
+}
+
+
+
+
+

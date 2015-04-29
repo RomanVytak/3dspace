@@ -1,16 +1,82 @@
 {
     "slider": [
         {
-            "url": "pictures/slider/img-1.jpg"
+            "url": "pictures/slider/2_finish.jpg"
         },
         {
-            "url": "pictures/slider/img-2.jpg"
+            "url": "pictures/slider/finish.jpg"
         },
         {
-            "url": "pictures/slider/img-1.jpg"
+            "url": "pictures/slider/render_.jpg"
         },
         {
-            "url": "pictures/slider/img-2.jpg"
+            "url": "pictures/slider/03.jpg"
+        },
+        {
+            "url": "pictures/slider/3_finish.jpg"
+        },
+        {
+            "url": "pictures/slider/02_finish.jpg"
+        },
+        {
+            "url": "pictures/slider/finish_.jpg"
+        }
+    ],
+    
+    "portfolio": [
+        {
+            "url": "pictures/slider/2_finish.jpg"
+        },
+        {
+            "url": "pictures/slider/finish.jpg"
+        },
+        {
+            "url": "pictures/slider/render_.jpg"
+        },
+        {
+            "url": "pictures/slider/03.jpg"
+        },
+        {
+            "url": "pictures/slider/3_finish.jpg"
+        },
+        {
+            "url": "pictures/slider/02_finish.jpg"
+        },
+        {
+            "url": "pictures/slider/finish_.jpg"
+        }
+    ],
+    
+    "url-first": "pictures/slider/2_finish.jpg",
+    "project": [
+        {
+            "url": "pictures/slider/2_finish.jpg"
+        },
+        {
+            "url": "pictures/slider/finish.jpg"
+        },
+        {
+            "url": "pictures/slider/render_.jpg"
+        },
+        {
+            "url": "pictures/slider/03.jpg"
+        },
+        {
+            "url": "pictures/slider/3_finish.jpg"
+        },
+        {
+            "url": "pictures/slider/02_finish.jpg"
+        },
+        {
+            "url": "pictures/slider/finish_.jpg"
         }
     ]
+    
+    
+    
+    
+    
+    
+    
+    
 }

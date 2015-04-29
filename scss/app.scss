@@ -22,7 +22,13 @@ $picpath: "../pictures/";
 @import 'general/layout/body';
 @import 'general/layout/footer';
  
-/* step */
+/* content */
+@import 'content/home/slider';
+@import 'content/home/home-block';
+@import 'content/portfolio/app';
+@import 'content/project/app';
+
+
 
 
 /* ie8 */

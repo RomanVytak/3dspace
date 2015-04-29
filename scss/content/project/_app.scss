@@ -1,0 +1,38 @@
+.project {
+    .big-image {
+        border: 1px solid rgb(235, 230, 224);
+        height: 536px;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    .top-text {
+        margin: 32px 0 16px 0;
+    }
+    .more-text {
+        margin: 32px 0 16px 0;
+    }
+    .wrapper-items {
+        > div {
+            height: 272px;
+            padding: 7px;
+            span {
+                border: 1px solid #fff;
+                display: block;
+                height: 100%;
+                background-size: cover !important;
+                background-position: center !important;
+                cursor: pointer;
+            }
+            
+            &.active {
+                span {
+                    border: 1px solid $color-1;
+                }
+            }
+        }
+    }
+}
+
+
+
+

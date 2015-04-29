@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>project</title>
+    <link rel="stylesheet" href="css/app.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="">
+    
+    {{ > header }}
+    
+    <div class="top-image" style="background: url('pictures/slider/2_finish.jpg')"></div>
+    
+    <div class="row title-page">
+        <div class="columns large-12">
+            <h1>Project "Alfa B"</h1>
+        </div>
+    </div>
+    
+    <div class="row content-holder project">
+        
+        {{ > breadcrumbs }}
+       
+        <div class="wrapper">
+            <div class="columns large-12">
+                <div class="big-image" style="background: url('{{{url-first}}}')"></div>
+            </div>
+            <div class="columns large-12 top-text">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui accusantium dolor excepturi expedita blanditiis quos amet eligendi. Fugit aspernatur, architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, similique, rerum. Cupiditate natus minus placeat aperiam odit quisquam dolorem a, repellendus libero aliquam temporibus doloribus suscipit animi, veniam maiores distinctio quas voluptatum?</p>
+            </div>
+            <div class="wrapper-items">
+                {{#project}}
+                <div class="columns large-3">
+                    <span style="background: url('{{{url}}}')"></span>
+                </div>
+                {{/project}}
+            </div>
+            <div class="columns large-12 more-text">
+                <h2>Lorem veniam maiores distinctio.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui accusantium dolor excepturi expedita blanditiis quos amet eligendi. Fugit aspernatur, architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, similique, rerum. Cupiditate natus minus</p><p>placeat aperiam odit quisquam dolorem a, repellendus libero aliquam temporibus doloribus suscipit animi, veniam maiores distinctio quas voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus soluta quos est minima cum optio eligendi explicabo animi eaque. Sunt dolorem quod accusamus excepturi est obcaecati minima sapiente, amet nisi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, accusamus, est. Molestias nobis odio consequuntur voluptate a voluptatem. Natus, dolorem.</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    {{ > footer }}
+    
+    <script src="js/build/index.min.js"></script>
+    
+    <script src='//localhost:3000/socket.io/socket.io.js'></script>
+    <script src='//localhost:3001/client/browser-sync-client.min.js'></script>
+</body>
+</html>

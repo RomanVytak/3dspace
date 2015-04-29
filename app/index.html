@@ -1,16 +1,13 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Template</title>
-  <link rel="stylesheet" href="css/app.css">
-  <!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>home</title>
+    <link rel="stylesheet" href="css/app.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body class="">
     
@@ -40,22 +37,34 @@
             </div>
         </div>
     </div>
-</header>
-<!--start slider-->
+</header><!--start slider-->
 <div class="slider-wrapper">
     <div id="sequence">
+        <span class="bt">
+            <span class="sequence-prev"></span>
+            <span class="sequence-next"></span>
+        </span>
         <ul class="sequence-canvas">
             <li style="" class="">
-                <span style="background:url('pictures/slider/img-1.jpg');" class="banner-likn"></span>
+                <span style="background:url('pictures/slider/2_finish.jpg');" class="banner-likn"></span>
             </li>
             <li style="" class="">
-                <span style="background:url('pictures/slider/img-2.jpg');" class="banner-likn"></span>
+                <span style="background:url('pictures/slider/finish.jpg');" class="banner-likn"></span>
             </li>
             <li style="" class="">
-                <span style="background:url('pictures/slider/img-1.jpg');" class="banner-likn"></span>
+                <span style="background:url('pictures/slider/render_.jpg');" class="banner-likn"></span>
             </li>
             <li style="" class="">
-                <span style="background:url('pictures/slider/img-2.jpg');" class="banner-likn"></span>
+                <span style="background:url('pictures/slider/03.jpg');" class="banner-likn"></span>
+            </li>
+            <li style="" class="">
+                <span style="background:url('pictures/slider/3_finish.jpg');" class="banner-likn"></span>
+            </li>
+            <li style="" class="">
+                <span style="background:url('pictures/slider/02_finish.jpg');" class="banner-likn"></span>
+            </li>
+            <li style="" class="">
+                <span style="background:url('pictures/slider/finish_.jpg');" class="banner-likn"></span>
             </li>
         </ul>
         <ul class="sequence-pagination">
@@ -63,16 +72,16 @@
             <li></li>
             <li></li>
             <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
     </div>
     <div class="text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span>Harum, cum</span>
+        Надійний дизайн. Цікаві технологіні рішення. <span>НАйкращі варіанти</span> з нами!
     </div>
 </div>
-<!--end slider-->
-
-
-<!--start home-block-->
+<!--end slider--><!--start home-block-->
 <div class="row home-block">
     <div class="columns large-4 item item-1">
         <div class="top-text">
@@ -93,12 +102,7 @@
         <div class="image"></div>
     </div>
 </div>
-
-
-<!--end home-block-->
-
-
-<div class="footer">
+<!--end home-block--><div class="footer">
     <div class="row">
         <div class="columns large-12">
             footer
@@ -106,12 +110,11 @@
     </div>
 </div>     
     <script src="js/build/index.min.js"></script>
-    
     <script>
         $(document).ready(function(){
             var options = {
-                nextButton: false,
-                prevButton: false,
+                nextButton: true,
+                prevButton: true,
                 pagination: true,
                 animateStartingFrameIn: true,
                 autoPlay: true,

@@ -115,6 +115,16 @@ module.exports = function (grunt) {
                         data: 'temp/index_local.json',
                         template: 'app/templates/_index.html',
                         dest: 'app/index.html'
+                    },
+                    {
+                        data: 'temp/index_local.json',
+                        template: 'app/templates/_portfolio.html',
+                        dest: 'app/portfolio.html'
+                    },
+                    {
+                        data: 'temp/index_local.json',
+                        template: 'app/templates/_project.html',
+                        dest: 'app/project.html'
                     }
           ]
             },

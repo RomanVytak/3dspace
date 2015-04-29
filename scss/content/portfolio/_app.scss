@@ -1,0 +1,49 @@
+.portfolio {
+    .wrapper > div {
+        height: 362px;
+        padding: 8px;
+        a {
+            display: block;
+            position: relative;
+            height: 100%;
+            background-size: cover!important;
+            background-position: center!important;
+            text-align: center;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: image-url('pattern2.png');
+                background-color: rgba(0, 0, 0, 0.3);
+                background-position: 0 18px;
+                z-index: 10;
+                transition: background-color 0.3s;
+            }
+            span {
+                opacity: 0;
+                transition: opacity 0.3s;
+                display: inline-block;
+                position: relative;
+                padding: 14px 40px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #fff;
+                text-decoration: none;
+                background: $color-2;
+                z-index: 11;
+            }
+            
+            &:hover {
+                &:after {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
