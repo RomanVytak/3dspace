@@ -26,17 +26,17 @@
         {{ > breadcrumbs }}
        
         <div class="wrapper">
-            <div class="columns large-12">
+            <div class="columns large-12 big-image-wrapper">
                 <div class="big-image" style="background: url('{{{url-first}}}')"></div>
-            </div>
-            <div class="columns large-12 top-text">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui accusantium dolor excepturi expedita blanditiis quos amet eligendi. Fugit aspernatur, architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, similique, rerum. Cupiditate natus minus placeat aperiam odit quisquam dolorem a, repellendus libero aliquam temporibus doloribus suscipit animi, veniam maiores distinctio quas voluptatum?</p>
+                <div class="controls">
+                    <span class="slide-left"><span></span></span>
+                    <span class="slide-right"><span></span></span>
+                </div>
             </div>
             <div class="wrapper-items">
                 {{#project}}
-                <div class="columns large-3">
-                    <span style="background: url('{{{url}}}')"></span>
+                <div class="columns large-2">
+                    <span style="background: url('{{{url}}}')" data-url="url('{{{url}}}')"></span>
                 </div>
                 {{/project}}
             </div>

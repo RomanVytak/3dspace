@@ -1,22 +1,73 @@
 .project {
+    .big-image-wrapper {
+        margin: 0 0 8px 0;
+        .controls {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            &.show-right-button {
+                .slide-right {
+                    display: none;
+                }
+            }
+            &.show-left-button {
+                .slide-left {
+                    display: none;
+                }
+            }
+            > span {
+                width: 70px;
+                height: calc(100% - 2px);
+                background: rgba(0,0,0,0.6);
+                cursor: pointer;
+                position: relative;
+                &:first-child {
+                    float: left;
+                    margin: 1px 0 0 8px; 
+                }
+                &:last-child {
+                    float: right;
+                    margin: 1px 8px 0 0;
+                }
+                > span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid;
+                }
+                &:first-child > span {
+                    margin: 0 0 0 -6px;
+                    transform: rotate(45deg) translate(-50%, -50%);
+                    border-color: transparent transparent #fff #fff;
+                }
+                &:last-child > span {
+                    margin: 0 0 0 -20px;
+                    transform: rotate(45deg) translate(-50%, -50%);
+                    border-color: #fff #fff transparent transparent;
+                }
+            }
+        }
+    }
     .big-image {
+        transition: background 0.3s;
         border: 1px solid rgb(235, 230, 224);
         height: 536px;
         background-size: cover !important;
         background-position: center !important;
-    }
-    .top-text {
-        margin: 32px 0 16px 0;
     }
     .more-text {
         margin: 32px 0 16px 0;
     }
     .wrapper-items {
         > div {
-            height: 272px;
+            height: 180px;
             padding: 7px;
             span {
-                border: 1px solid #fff;
                 display: block;
                 height: 100%;
                 background-size: cover !important;
@@ -26,7 +77,7 @@
             
             &.active {
                 span {
-                    border: 1px solid $color-1;
+                    border: 4px solid $color-1;
                 }
             }
         }

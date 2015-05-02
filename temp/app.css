@@ -1461,11 +1461,13 @@ select {
 
 
 .top-image {
-  position: relative;
-  margin-top: -79px;
-  height: 500px;
+  position: absolute;
+  height: 100vh;
   background-position: center !important;
-  background-size: cover !important; }
+  background-size: cover !important;
+  width: 100%;
+  top: 0;
+  left: 0; }
   .top-image:after {
     content: '';
     position: absolute;
@@ -1479,7 +1481,7 @@ select {
     background-color: rgba(0, 0, 0, 0.5); }
 
 .title-page {
-  margin: -319px auto 10px;
+  margin: 72px auto 10px;
   color: white;
   position: relative;
   z-index: 12; }
@@ -1488,7 +1490,7 @@ select {
   background: white;
   position: relative;
   z-index: 12;
-  padding: 40px 32px;
+  padding: 24px 40px;
   min-height: 400px; }
 
 header {
@@ -1754,26 +1756,64 @@ body:not(.loaded) > * {
     .portfolio .wrapper > div a:hover span {
       opacity: 1; }
 
+.project .big-image-wrapper {
+  margin: 0 0 8px 0; }
+  .project .big-image-wrapper .controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+    .project .big-image-wrapper .controls.show-right-button .slide-right {
+      display: none; }
+    .project .big-image-wrapper .controls.show-left-button .slide-left {
+      display: none; }
+    .project .big-image-wrapper .controls > span {
+      width: 70px;
+      height: calc(100% - 2px);
+      background: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      position: relative; }
+      .project .big-image-wrapper .controls > span:first-child {
+        float: left;
+        margin: 1px 0 0 8px; }
+      .project .big-image-wrapper .controls > span:last-child {
+        float: right;
+        margin: 1px 8px 0 0; }
+      .project .big-image-wrapper .controls > span > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: 2px solid; }
+      .project .big-image-wrapper .controls > span:first-child > span {
+        margin: 0 0 0 -6px;
+        transform: rotate(45deg) translate(-50%, -50%);
+        border-color: transparent transparent white white; }
+      .project .big-image-wrapper .controls > span:last-child > span {
+        margin: 0 0 0 -20px;
+        transform: rotate(45deg) translate(-50%, -50%);
+        border-color: white white transparent transparent; }
 .project .big-image {
+  transition: background 0.3s;
   border: 1px solid #ebe6e0;
   height: 536px;
   background-size: cover !important;
   background-position: center !important; }
-.project .top-text {
-  margin: 32px 0 16px 0; }
 .project .more-text {
   margin: 32px 0 16px 0; }
 .project .wrapper-items > div {
-  height: 272px;
+  height: 180px;
   padding: 7px; }
   .project .wrapper-items > div span {
-    border: 1px solid white;
     display: block;
     height: 100%;
     background-size: cover !important;
     background-position: center !important;
     cursor: pointer; }
   .project .wrapper-items > div.active span {
-    border: 1px solid #e17a2c; }
+    border: 4px solid #e17a2c; }
 
 /* ie8 */
