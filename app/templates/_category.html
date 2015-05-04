@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>portfolio</title>
+    <title>category</title>
     <link rel="stylesheet" href="css/app.css">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,32 +13,26 @@
     
     {{ > header }}
     
-    <div class="top-image" style="background: url('{{{bg-image-portfolio}}}')"></div>
+    <div class="top-image" style="background: url('{{{bg-image-category}}}')"></div>
     
     <div class="row title-page">
         <div class="columns large-12">
-            <h1>Portfolio</h1>
+            <h1>category</h1>
         </div>
     </div>
     
-    <div class="row content-holder portfolio">
-       
-        {{ > breadcrumbs }}
-       
-        <div class="wrapper clearfix">
-            {{#portfolio}}
-            <div class="columns large-3">
-                <div class="my-wrap">
-                    <div class="name"><h2>{{{name}}}</h2></div>
-                    <div class="my-block" style="background: url('{{{url}}}')">
-                        <a href="project.html">Відкрити</a>
-                    </div>
-                </div>
-            </div>
-            {{/portfolio}}
-        </div>
+    <div class="row content-holder category">
         
-        {{ > pagination }}
+        {{ > breadcrumbs }}
+            
+        <div class="wrapper clearfix">
+            <div class="columns large-6">
+                left
+            </div>
+            <div class="columns large-6">
+                right
+            </div>
+        </div>
         
     </div>
     

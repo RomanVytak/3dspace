@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>contacts</title>
+    <link rel="stylesheet" href="css/app.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="">
+    
+    {{ > header }}
+    
+    <div class="top-image" style="background: url('{{{bg-image-contacts}}}')"></div>
+    
+    <div class="row title-page">
+        <div class="columns large-12">
+            <h1>контакти</h1>
+        </div>
+    </div>
+    
+    <div class="row content-holder contacts">
+        
+        {{ > breadcrumbs }}
+        
+        <div class="columns large-5">
+            <h2>Щоб замовити дизайн проект<br>або для консультації:</h2>
+            <p>моб. +380 63 870 43 44<br>
+            моб. +380 98 584 49 21<br>
+            email: junior_ua@ukr.net<br>
+            email: junioropui_ua@ukr.net</p>
+        </div> 
+        <div class="columns large-7">
+            <form action="">
+                <label for="name">
+                    Ваше ім'я та прізвище
+                    <input type="text" id="name" placeholder="">
+                </label>
+                <label for="tel">
+                    Ваш номер телефону
+                    <input type="text" id="tel" placeholder="">
+                </label>
+                <label for="text">
+                    Ваше повідомлення
+                    <textarea name="" id="text" cols="30" rows="10" placeholder=""></textarea>
+                </label>
+                <button name="" type="submit" value="" class="button">Надіслати</button>
+            </form>
+        </div>
+        <div class="columns large-12" id="map"></div>
+        
+        
+    </div>
+    
+    {{ > footer }}
+    
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="js/build/index.min.js"></script>
+    
+    <script src='//localhost:3000/socket.io/socket.io.js'></script>
+    <script src='//localhost:3001/client/browser-sync-client.min.js'></script>
+</body>
+</html>

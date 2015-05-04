@@ -1,0 +1,42 @@
+.contacts {
+    form {
+        margin: 16px 0 0 0;
+    }
+    #map {
+        height: 400px;
+        width: calc(100% + 32px);
+        margin: 0 0 -56px -16px;
+    }
+    label {
+        display: block;
+        width: 100%;
+        margin: 0 0 8px 0;
+        input, textarea {
+            outline: none;
+            border: 1px solid #DADADA;
+            width: 280px;
+            padding: 6px 10px;
+        }
+        input {
+            display: block;
+        }
+        textarea {
+            display: block;
+            width: 500px;
+            height: 100px;
+        }
+    }
+    button {
+        background: $color-4;
+        outline: none;
+        border: none;
+        color: #fff;
+        font-weight: 300;
+        padding: 10px 26px;
+        margin: 16px 0 30px;
+    }
+}
+
+
+
+

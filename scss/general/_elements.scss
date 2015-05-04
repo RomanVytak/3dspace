@@ -2,12 +2,35 @@
 $color-1: #E17A2C;
 $color-2: #4BA363;
 $color-3: #1D3960;
+$color-4: #C12025;
 
+.color-1:after {
+    background: $color-1;
+}
+.color-2:after {
+    background: $color-2;
+}
+.color-3:after {
+    background: $color-3;
+}
+.color-4:after {
+    background: $color-4;
+}
 
 [class*="column"] + [class*="column"]:last-child {
     float: left;
 }
 
+// table
+table {
+    width: 100%;
+    td {
+        padding: 8px 16px;
+        border: 1px solid $color-2;
+    }
+}
+
+// breadcrumbs
 .breadcrumbs {
     padding: 8px 0 16px 8px;
     font-size: 14px;
@@ -22,5 +45,50 @@ $color-3: #1D3960;
         color: $color-2;
     }
 }
+
+// pagination
+.paginations {
+    margin-top: 40px;
+    @include pagination;
+    height: 100%;
+    ul.pagination li.current a:hover, ul.pagination li.current a:focus {
+        background: $color-2;
+        color: #fff;
+    }
+    ul.pagination li:hover a, ul.pagination li a:focus {
+        background: $color-2;
+        color: #fff;
+    }
+    ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus {
+        background: none;
+        color: #111;
+    }
+    ul.pagination li.unavailable a {
+        color: #111;
+    }
+    ul.pagination li {
+        font-size: 16px;
+        height: 100%;
+    }
+    ul.pagination {
+        height: 100%;
+        margin: 0;
+    }
+    ul.pagination li a {
+        padding: 6px 16px;
+        text-decoration: none;
+        background: none;
+        border: 1px solid $color-2;
+        border-radius: 0px;
+        color: #111;
+        font-weight: 400;
+    }
+    ul.pagination li.current a {
+        font-weight: 400;
+        background: $color-2;
+    }
+}
+
+
 
 

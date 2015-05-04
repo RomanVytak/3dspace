@@ -64,10 +64,16 @@
             &:first-child {
                 transform: rotate(45deg);
                 border-color: transparent transparent #fff #fff;
+                &:hover {
+                    border-color: transparent transparent $color-2 $color-2;
+                }
             }
             &:last-child {
                 transform: rotate(45deg);
                 border-color: #fff #fff transparent transparent;
+                &:hover {
+                    border-color: $color-2 $color-2 transparent transparent;
+                }
             }
         }
     }

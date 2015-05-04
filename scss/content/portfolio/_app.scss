@@ -1,47 +1,108 @@
 .portfolio {
-    .wrapper > div {
-        height: 362px;
-        padding: 8px;
-        a {
-            display: block;
-            position: relative;
-            height: 100%;
-            background-size: cover!important;
-            background-position: center!important;
-            text-align: center;
-            &:after {
-                content: '';
+    .wrapper {
+        > div {
+            height: 312px;
+            padding: 8px;
+            &:nth-child(2n+1) > div .name:after {
+                transform: rotate(-3deg) translateX(-50%);
+            }
+            &:nth-child(2n) > div .name:after {
+                transform: rotate(3deg) translateX(-50%);
+            }
+            &:nth-child(3n+1) > div .name:after {
+                background: $color-1;
+            }
+            &:nth-child(3n+2) > div .name:after {
+                background: $color-2;
+            }
+            &:nth-child(3n+3) > div .name:after {
+                background: $color-3;
+            }
+            &:nth-child(4n+4) > div .name:after {
+                background: $color-4;
+            }
+            .my-wrap {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            .name {
+                overflow: hidden;
+                z-index: 12;
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: 100%;
-                background-image: image-url('pattern2.png');
-                background-color: rgba(0, 0, 0, 0.3);
-                background-position: 0 18px;
-                z-index: 10;
-                transition: background-color 0.3s;
-            }
-            span {
-                opacity: 0;
-                transition: opacity 0.3s;
-                display: inline-block;
-                position: relative;
-                padding: 14px 40px;
-                top: 50%;
-                transform: translateY(-50%);
-                color: #fff;
-                text-decoration: none;
-                background: $color-2;
-                z-index: 11;
-            }
-            
-            &:hover {
+                height: 70px;
+                    text-align: center;
                 &:after {
-                    background-color: rgba(0, 0, 0, 0.8);
+                    content: '';
+                    position: absolute;
+                    bottom: 19px;
+                    left: 50%;
+                    width: calc(100% + 100px);
+                    height: calc(100% + 20px);
+                    z-index: -1;
+                    transform-origin: left;
+                    border-bottom: 2px solid rgb(232, 232, 232);
                 }
-                span {
-                    opacity: 1;
+                h2 {
+                    margin: 0;
+                    line-height: 50px;
+                    color: white;
+                    font-weight: 300;
+                    font-size: 20px;
+                }
+            }
+            .my-block {
+                position: relative;
+                height: 100%;
+                background-size: cover!important;
+                background-position: center!important;
+                text-align: center;
+                transition: all 0.3s;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: image-url('pattern2.png');
+                    background-color: rgba(0, 0, 0, 0.3);
+                    background-position: 0 18px;
+                    z-index: 10;
+                    transition: background-color 0.3s;
+                }
+                a {
+                    opacity: 0;
+                    position: absolute;
+                    bottom: 50px;
+                    left: 50%;
+                    transform: translate(-50%, 20px);
+                    transition: all 0.3s;
+                    z-index: 14;
+                    border: 1px solid white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: white;
+                    padding: 8px 32px;
+                    background: rgba(0, 0, 0, 0.5);
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.7);
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                    &:after {
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+                    a {
+                        opacity: 1;
+                        transform: translate(-50%, 0px);
+                    }
                 }
             }
         }

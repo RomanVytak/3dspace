@@ -2,11 +2,17 @@
     .big-image-wrapper {
         margin: 0 0 8px 0;
         .controls {
+            overflow: hidden;
             position: absolute;
             top: 0;
-            left: 0;
+            left: 8px; 
             height: 100%;
-            width: 100%;
+            width: calc(100% - 16px);
+            &:hover {
+                > span {
+                    transform: translateX(0) !important;
+                }
+            }
             &.show-right-button {
                 .slide-right {
                     display: none;
@@ -18,18 +24,21 @@
                 }
             }
             > span {
+                transition: transform 0.3s;
                 width: 70px;
                 height: calc(100% - 2px);
                 background: rgba(0,0,0,0.6);
                 cursor: pointer;
                 position: relative;
                 &:first-child {
+                    transform: translateX(-80px);
                     float: left;
-                    margin: 1px 0 0 8px; 
+                    margin: 1px 0 0 1px; 
                 }
                 &:last-child {
+                    transform: translateX(80px);
                     float: right;
-                    margin: 1px 8px 0 0;
+                    margin: 1px 1px 0 0;
                 }
                 > span {
                     position: absolute;

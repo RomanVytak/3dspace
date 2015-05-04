@@ -4,7 +4,8 @@
 
 // top image
 .top-image {
-    position: absolute;
+    position: fixed;
+    transform: translateZ(0);
     height: 100vh;
     background-position: center !important;
     background-size: cover !important;
@@ -35,14 +36,22 @@
 
 // content holder
 .content-holder {
+    transform: translateZ(0);
     background: #fff;
     position: relative;
     z-index: 12;
-    padding: 24px 40px;
+    padding: 32px 16px 56px;
     min-height: 400px;
 }
 
-
+// content text
+.content-text {
+    img {
+        width: 50%;
+        float: left;
+        margin: 6px 32px 16px 0;
+    }
+}
 
 
 

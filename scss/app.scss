@@ -12,6 +12,7 @@ $picpath: "../pictures/";
 @import "foundation/components/global"; 
 @import "foundation/components/grid";
 @import "foundation/components/orbit";
+@import "foundation/components/pagination";
 
 /* General Elements */
 @import "general/helpers/mixins";
@@ -23,11 +24,14 @@ $picpath: "../pictures/";
 @import 'general/layout/footer';
  
 /* content */
+@import 'content/home/app';
 @import 'content/home/slider';
 @import 'content/home/home-block';
 @import 'content/portfolio/app';
+@import 'content/portfolio/category';
 @import 'content/project/app';
-
+@import 'content/blog/app';
+@import 'content/contacts/app';
 
 
 
