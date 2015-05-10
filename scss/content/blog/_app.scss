@@ -3,6 +3,7 @@
         h2 {
             width: 60%;
             float: left;
+            margin: 0;
         }
         .tags {
             width: 40%;
@@ -10,7 +11,7 @@
             text-align: right;
             font-family: $body-font-family-title;
             font-size: 0;
-            padding: 17px 0 0 0;
+            margin: -3px 0 0 0;
             a {
                 text-decoration: none;
                 display: inline-block;
@@ -27,8 +28,8 @@
     }
     .item {
         border-bottom: 1px solid #BDBDBD;
-        padding-bottom: 56px;
-        margin-bottom: 32px;
+        padding-bottom: 32px;
+        margin-bottom: 40px;
         &:last-child {
             border-bottom: none;
         }
@@ -47,5 +48,21 @@
                 color: #fff;
             }
         }
+    }
+    .image-wrapper {
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+    .text-wrapper {
+        float: right;
+        width: 75%;
+        padding: 0 0 0 24px;
+        margin: -5px 0 0 0;
     }
 }

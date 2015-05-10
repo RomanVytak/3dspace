@@ -76,6 +76,10 @@ module.exports = function (grunt) {
                         'bower_components/jquery/jquery.min.js',
                         'app/js/vendor/jquery.sequence-min.js',
                         'app/js/app/app.js'
+                    ],
+                    'app/js/build/my.map.js':
+                    [
+                        'app/js/app/googlemaps.js'
                     ]
                 }
             }
@@ -140,11 +144,6 @@ module.exports = function (grunt) {
                         data: 'temp/index_local.json',
                         template: 'app/templates/_contacts.html',
                         dest: 'app/contacts.html'
-                    },
-                    {
-                        data: 'temp/index_local.json',
-                        template: 'app/templates/_category.html',
-                        dest: 'app/category.html'
                     }
           ]
             },

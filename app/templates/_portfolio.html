@@ -17,13 +17,19 @@
     
     <div class="row title-page">
         <div class="columns large-12">
-            <h1>Portfolio</h1>
+            <h1>Всі проекти</h1>
         </div>
     </div>
     
     <div class="row content-holder portfolio">
        
         {{ > breadcrumbs }}
+        
+        <div class="change-class">
+            <a href="#" class="all active">Всі проекти</a>
+            <a href="#" class="class-1">Дизайн інтерєру</a>
+            <a href="#" class="class-2">Дизайн екстерєру</a>
+        </div>
        
         <div class="wrapper clearfix">
             {{#portfolio}}

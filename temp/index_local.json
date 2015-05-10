@@ -104,7 +104,7 @@
             "name": "New project",
             "url": "pictures/slider/02_finish.jpg"
         }
-    ],
+    ], 
     
     "url-first": "pictures/slider/2_finish.jpg",
     "project": [
@@ -149,6 +149,7 @@
                 "outdoor": 0,
                 "three-d": 1,
                 "study": 0,
+                "url": "pictures/slider/render_.jpg",
                 "title": "Lorem veniam maiores distinctio",
                 "text": "placeat aperiam odit quisquam dolorem a, repellendus libero aliquam temporibus doloribus suscipit animi, veniam maiores distinctio quas voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus soluta quos est minima cum optio eligendi explicabo animi eaque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eum recusandae consectetur dolorum quod iure veniam, inventore eligendi odit necessitatibus..."
             },
@@ -157,6 +158,7 @@
                 "outdoor": 0,
                 "three-d": 0,
                 "study": 0,
+                "url": "pictures/slider/2_finish.jpg",
                 "title": "Maiores distinctio",
                 "text": "placeat aperiam odit quisquam dolorem a, repellendus libero aliquam temporibus doloribus suscipit animi, veniam maiores distinctio quas voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus soluta quos est minima cum optio eligendi explicabo animi eaque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eum recusandae consectetur dolorum quod iure veniam, inventore eligendi odit necessitatibus Natus soluta quos est minima cum optio eligendi explicabo animi eaque Lorem ipsum dolor sit amet, consectetur adipisicing elit...."
             },
@@ -165,6 +167,7 @@
                 "outdoor": 1,
                 "three-d": 0,
                 "study": 0,
+                "url": "pictures/slider/02_finish.jpg",
                 "title": "Lorem veniam",
                 "text": "placeat aperiam odit quisquam dolorem a, repellendus libero aliquam temporibus doloribus suscipit animi, veniam maiores distinctio quas voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus soluta quos est minima cum optio eligendi explicabo animi eaque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eum recusandae consectetur dolorum quod iure veniam, inventore eligendi odit necessitatibus..."
             },
@@ -173,6 +176,7 @@
                 "outdoor": 0,
                 "three-d": 1,
                 "study": 0,
+                "url": "pictures/slider/finish.jpg",
                 "title": "Lorem veniam maiores",
                 "text": "placeat aperiam odit quisquam dolorem a, repellendus libero aliquam temporibus doloribus suscipit animi, veniam maiores distinctio quas voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus soluta quos est minima cum optio eligendi explicabo animi eaque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eum recusandae consectetur dolorum quod iure veniam, inventore eligendi odit necessitatibus repellendus libero aliquam temporibus doloribus suscipit animi, veniam maiores distinctio quas voluptatum? Lorem ipsum dolor sit amet repellendus libero aliquam temporibus doloribus suscipit animi, veniam maiores distinctio quas voluptatum? Lorem ipsum dolor sit amet..."
             }

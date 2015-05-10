@@ -107,4 +107,36 @@
             }
         }
     }
+    .change-class {
+        position: absolute;
+        top: -62px;
+        right: 0;
+            text-align: center;
+            font-size: 0;
+        > a {
+            display: inline-block;
+            background: rgb(231, 231, 231);
+            border-left: 1px solid rgb(199, 199, 199);
+            padding: 19px 32px;
+                text-decoration: none;
+                font-size: 16px;
+                color: #000;
+                font-family: Roboto Condensed;
+                font-weight: 400;
+            &:first-child {
+                border: none;
+            }
+            &.active {
+                background: #fff;
+                &:hover {
+                    background: #fff;
+                }
+            }
+            &:hover {
+                background: #F0F0F0;
+            }
+        }
+    }
 }
+
+
