@@ -61,6 +61,7 @@
             border: 2px solid;
             margin: 0 18px;
             cursor: pointer;
+            transition: all .3s;
             &:first-child {
                 transform: rotate(45deg);
                 border-color: transparent transparent #fff #fff;

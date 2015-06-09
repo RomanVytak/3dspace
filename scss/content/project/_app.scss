@@ -1,13 +1,14 @@
 .project {
     .big-image-wrapper {
         margin: 0 0 8px 0;
+        padding: 0 4px;
         .controls {
             overflow: hidden;
             position: absolute;
             top: 0;
-            left: 8px; 
+            left: 4px;
             height: 100%;
-            width: calc(100% - 16px);
+            width: calc(100% - 8px);
             &:hover {
                 > span {
                     transform: translateX(0) !important;
@@ -65,28 +66,35 @@
     .big-image {
         transition: background 0.3s;
         border: 1px solid rgb(235, 230, 224);
-        height: 536px;
         background-size: cover !important;
         background-position: center !important;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     .more-text {
         margin: 32px 0 16px 0;
     }
     .wrapper-items {
+        .large-2 {
+            width: 10%;
+        }
         > div {
-            height: 180px;
-            padding: 7px;
+            height: 75px;
+            padding: 0;
             span {
                 display: block;
                 height: 100%;
                 background-size: cover !important;
                 background-position: center !important;
                 cursor: pointer;
+                border: 4px solid #fff;
             }
             
             &.active {
                 span {
-                    border: 4px solid $color-1;
+                    border: 4px solid $color-2;
                 }
             }
         }

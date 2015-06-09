@@ -28,26 +28,31 @@ header {
     // menu
     .menu {
         height: 100%;
-        display: table;
             text-align: right;
         ul {
-            display: table-cell;
-            vertical-align: middle;
+            height: 100%;
             padding: 0;
             margin: 0;
+            font-size: 0px;
         }
         li {
             display: inline-block;
+            height: 100%;
             a {
                 color: #fff;
                 font-size: 16px;
                 text-decoration: none;
                 text-transform: uppercase;
                 font-weight: 700;
-                margin: 0 24px;
+                padding: 0 24px;
                 font-family: $body-font-family-title;
+                height: 100%;
+                display: block;
+                line-height: 77px;
+                transition: all .1s;
                 &:hover {
-                    color: $color-1;
+                    color: $color-2;
+                    background-color: rgba(0,0,0,0.1);
                 }
             }
             ul {
@@ -58,12 +63,10 @@ header {
     
     // language
     .language {
-        display: table;
         height: 100%;
         text-align: right;
         > div {
-            display: table-cell;
-            vertical-align: middle;
+            height: 100%;
         }
         a {
             display: inline-block;
@@ -72,10 +75,12 @@ header {
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 700;
-            margin: 0 8px;
+            padding: 0 8px;
             font-family: $body-font-family-title;
-            &.active {
-                color: $color-1;
+            transition: all .3s;
+            line-height: 77px;
+            &:hover, &.active {
+                color: $color-2;
             }
         }
     }

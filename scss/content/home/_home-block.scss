@@ -1,57 +1,85 @@
 .home-block {
-    .wrapper {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        &:hover {
-            .image {
-                transform: scale(1.05);
-            }
-            a {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0px);
-            }
-            &:after {
-                background-color: rgba(0, 0, 0, 0.5);
-            }
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: image-url('pattern2.png');
-            background-color: rgba(0, 0, 0, 0.3);
-            background-position: 0 18px;
-            z-index: 10;
-            transition: all 0.3s;
-        }
-        a {
-            transition: transform 0.3s, opacity 0.3s;
-            opacity: 0;
-            position: absolute;
-            bottom: 60px;
-            left: 50%;
-            z-index: 14;
-            border: 1px solid white;
-            text-decoration: none;
-            color: #fff;
-            text-transform: uppercase;
-            transform: translateX(-50%) translateY(20px) translateZ(0);
-            padding: 8px 32px;
-            background: rgba(0,0,0,0.5);
-            transition: all 0.3s;
-            &:hover {
-                background: rgba(0,0,0,0.7);
-            }
-        }
-    }
     .item {
         height: 400px;
         margin: 50px 0 40px 0;
+        position: relative;
+        .wrapper {
+            position: relative;
+            padding: 0 8px;
+            width: 100%;
+            height: 100%;
+            transition: all .4s ease;
+            transform: perspective(1000px) rotateY(0deg) translateZ(0);
+            > div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all .4s ease;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: image-url('pattern2.png');
+                    background-color: rgba(0, 0, 0, 0.3);
+                    background-position: 0 18px;
+                    z-index: 10;
+                    transition: all 0.3s;
+                }
+            }
+        }
+        .wrapper-face {
+            opacity: 1;
+        }
+        .wrapper-back {
+            opacity: 0;
+            transform: perspective(1000px) rotateY(180deg) translateZ(0);
+            padding: 8px 24px;
+            color: #fff;
+            &:after {
+                background-color: rgba(0, 0, 0, 0.6) !important;
+            }
+            > * {
+                position: relative;
+                z-index: 11;
+            }
+            .button {
+                transition: transform 0.3s, opacity 0.3s;
+                opacity: 1;
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                z-index: 14;
+                border: 1px solid white;
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                transform: translateX(-50%);
+                padding: 8px 32px;
+                background: rgba(0,0,0,0.5);
+                transition: all 0.3s;
+                &:hover {
+                    background: rgba(0,0,0,0.7);
+                }
+            }
+        }
+        
+        // hover
+        &:hover {
+            .wrapper {
+                transform: perspective(1000px) rotateY(180deg) translateZ(0);
+            }
+            .wrapper-face {
+                opacity: 0;
+            }
+            .wrapper-back {
+                opacity: 1;
+            }
+        }
     }
     .top-text {
         overflow: hidden;
@@ -66,11 +94,11 @@
             content: '';
             position: absolute;
             bottom: 12px;
-            left: 50%;
+            left: 0;
             width: calc(100% + 100px);
             height: calc(100% + 20px);
             z-index: -1;
-            transform-origin: left;
+            background: $color-2;
             border-bottom: 2px solid rgb(232, 232, 232);
         }
         h2 {
@@ -90,31 +118,10 @@
         background-size: cover !important;
         transition: transform 0.3s;
     }
-    .item-1 {
-        .top-text:after {
-            background: $color-1;
-            transform: rotate(-3deg) translateX(-50%);
-        }
-    }
-    .item-2 {
-        .top-text:after {
-            background: $color-2;
-            transform: rotate(3deg) translateX(-50%);
-        }
-    }
-    .item-3 {
-        .top-text:after {
-            background: $color-3;
-            transform: rotate(-3deg) translateX(-50%);
-        }
-    }
-    .item-4 {
-        .top-text:after {
-            background: $color-4;
-            transform: rotate(3deg) translateX(-50%);
-        }
-    }
 }
+
+
+
 
 
 

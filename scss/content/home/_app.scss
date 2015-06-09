@@ -15,7 +15,7 @@
             width: 100%;
             height: 100%;
             background-image: image-url('pattern2.png');
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.8);
             background-position: 0 18px;
             z-index: 10;
         }
@@ -52,3 +52,18 @@
         }
     }
 }
+
+.partners {
+    text-align: center;
+    h2 {
+        text-align: left;
+    }
+    img {
+        display: inline-block;
+        width: 100px;
+        margin: 16px 32px;
+    }
+}
+
+
+

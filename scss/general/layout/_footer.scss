@@ -19,4 +19,24 @@
         margin: 0;
         padding: 8px 0 0 0;
     }
+    
+    .social {
+        text-align: right;
+        a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-size: 100% 100% !important;
+            margin: 38px 2px 0;
+        }
+        .face {
+            background: image-url('face.png') no-repeat center;
+        }
+        .tw {
+            background: image-url('tw.png') no-repeat center;
+        }
+        .vk {
+            background: image-url('vk.png') no-repeat center;
+        }
+    }
 }
