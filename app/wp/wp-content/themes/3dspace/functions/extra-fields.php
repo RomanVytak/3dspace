@@ -1,4 +1,32 @@
-<? 
+<?
+/*================================================= post EXTRA FIELDS =============================================================*/
+add_action('admin_init', 'post_extra_fields', 1);
+function post_extra_fields(){
+add_meta_box('extra_fields', 'Options', 'post_extra_fields_box_func', 'post', 'normal', 'high');
+}
+function post_extra_fields_box_func($post){?>
+	<p>
+		<label for="upload_image">Background image</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[background_image]" value="<?php echo get_post_meta($post->ID, 'background_image', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+<input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+<?}
+add_action('save_post', 'post_extra_fields_update', 0);
+function post_extra_fields_update($post_id){
+if (!wp_verify_nonce($_POST['extra_fields_nonce'], __FILE__))return false;
+if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return false;
+if (!current_user_can('edit_post', $post_id)) return false;
+if (!isset($_POST['extra'])) return false;
+$_POST['extra'] = array_map('trim', $_POST['extra']);
+foreach($_POST['extra'] as $key=>$value){
+if(empty($value))
+continue delete_post_meta($post_id, $key);
+update_post_meta($post_id, $key, $value);
+}
+return $post_id;
+}
+/*================================================= END post EXTRA FIELDS =============================================================*/
 /*================================================= slide EXTRA FIELDS =============================================================*/
 add_action('admin_init', 'slide_extra_fields', 1);
 function slide_extra_fields(){
@@ -27,7 +55,74 @@ update_post_meta($post_id, $key, $value);
 return $post_id;
 }
 /*================================================= END slide EXTRA FIELDS =============================================================*/
-
+/*================================================= portfolio EXTRA FIELDS =============================================================*/
+add_action('admin_init', 'portfolio_extra_fields', 1);
+function portfolio_extra_fields(){
+add_meta_box('extra_fields', 'Options', 'portfolio_extra_fields_box_func', 'portfolio', 'normal', 'high');
+}
+function portfolio_extra_fields_box_func($post){?>
+	<p>
+		<label for="upload_image">Main image</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[main_image]" value="<?php echo get_post_meta($post->ID, 'main_image', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+	<p>
+		<label for="upload_image">Image 2</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[image_2]" value="<?php echo get_post_meta($post->ID, 'image_2', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+	<p>
+		<label for="upload_image">Image 3</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[image_3]" value="<?php echo get_post_meta($post->ID, 'image_3', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+	<p>
+		<label for="upload_image">Image 4</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[image_4]" value="<?php echo get_post_meta($post->ID, 'image_4', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+	<p>
+		<label for="upload_image">Image 5</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[image_5]" value="<?php echo get_post_meta($post->ID, 'image_5', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+	<p>
+		<label for="upload_image">Image 6</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[image_6]" value="<?php echo get_post_meta($post->ID, 'image_6', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+	<p>
+		<label for="upload_image">Image 7</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[image_7]" value="<?php echo get_post_meta($post->ID, 'image_7', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+	<p>
+		<label for="upload_image">Image 8</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[image_8]" value="<?php echo get_post_meta($post->ID, 'image_8', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+	<p>
+		<label for="upload_image">Image 9</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[image_9]" value="<?php echo get_post_meta($post->ID, 'image_9', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
+<input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+<?}
+add_action('save_post', 'portfolio_extra_fields_update', 0);
+function portfolio_extra_fields_update($post_id){
+if (!wp_verify_nonce($_POST['extra_fields_nonce'], __FILE__))return false;
+if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return false;
+if (!current_user_can('edit_post', $post_id)) return false;
+if (!isset($_POST['extra'])) return false;
+$_POST['extra'] = array_map('trim', $_POST['extra']);
+foreach($_POST['extra'] as $key=>$value){
+if(empty($value))
+continue delete_post_meta($post_id, $key);
+update_post_meta($post_id, $key, $value);
+}
+return $post_id;
+}
+/*================================================= END portfolio EXTRA FIELDS =============================================================*/
 
 
 function upload_scripts() {

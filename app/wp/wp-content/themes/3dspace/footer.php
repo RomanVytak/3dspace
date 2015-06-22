@@ -11,6 +11,11 @@
     </div>
 </div>     
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/build/index.min.js"></script>
+<?if ( is_singular( 'portfolio' ) ) {?>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jssor.js"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jssor.slider.js"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jssor.ssetings.js"></script>
+<?}?>
     <script>
         $(document).ready(function(){
             var options = {
@@ -25,7 +30,8 @@
             var mySequence = jQuery("#sequence").sequence(options).data("sequence");
         });
     </script>
-	<?wp_footer();?>
 	<?php if(get_option('ok_ga_code') != ""){ echo "".get_option('ok_ga_code').""; }?>
+	
+	<?php wp_footer(); ?>
 </body>
 </html>
