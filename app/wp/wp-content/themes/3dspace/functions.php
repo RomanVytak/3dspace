@@ -5,6 +5,9 @@
 			'menu_head' => __('Header navigation'),
 		));
 	}
+require_once(TEMPLATEPATH . '/functions/options.php');
+require_once(TEMPLATEPATH . '/functions/post-type.php');
+require_once(TEMPLATEPATH . '/functions/extra-fields.php');
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
 add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 add_filter('pre_site_transient_update_core',create_function('$a', "return null;"));
@@ -236,7 +239,4 @@ function request_url(){
 	$result .= $_SERVER['REQUEST_URI'];
 	return $result;
 }
-require_once(TEMPLATEPATH . '/functions/options.php');
-require_once(TEMPLATEPATH . '/functions/post-type.php');
-require_once(TEMPLATEPATH . '/functions/extra-fields.php');
 ?>
