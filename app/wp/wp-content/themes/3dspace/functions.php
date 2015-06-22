@@ -1,12 +1,8 @@
 <?php
 	add_theme_support( 'post-thumbnails' );
-	//add_image_size( 'partner', 271, 271, true ); 
-	//add_image_size( 'news', 600, 436, true ); 
 	if(function_exists('register_nav_menus')) {
 		register_nav_menus( array(
 			'menu_head' => __('Header navigation'),
-			//'menu_main' => __('Main navigation'),
-			//'menu_footer' => __('Footer navigation'),
 		));
 	}
 require_once(TEMPLATEPATH . '/functions/options.php');
@@ -39,37 +35,35 @@ function wp_pagination() {
 }
 
 function dimox_breadcrumbs() {
- /* === ОПЦИИ === */
  if(get_locale() == 'uk') {
- $text['home'] = 'Головна'; // текст ссылки "Главная"
- $text['category'] = 'Архів категорії "%s"'; // текст для страницы рубрики
- $text['search'] = 'Результати пошуку за запитом "%s"'; // текст для страницы с результатами поиска
- $text['tag'] = 'Публікації з тегом "%s"'; // текст для страницы тега
- $text['author'] = 'Публікації автора %s'; // текст для страницы автора
- $text['404'] = 'Помилка 404'; // текст для страницы 404
- $text['page'] = 'Сторінка %s'; // текст 'Страница N'
- $text['cpage'] = 'Сторінка коментарів %s'; // текст 'Страница комментариев N'
+ $text['home'] = 'Головна'; 
+ $text['category'] = 'Архів категорії "%s"'; 
+ $text['search'] = 'Результати пошуку за запитом "%s"';
+ $text['tag'] = 'Публікації з тегом "%s"';
+ $text['author'] = 'Публікації автора %s';
+ $text['404'] = 'Помилка 404';
+ $text['page'] = 'Сторінка %s';
+ $text['cpage'] = 'Сторінка коментарів %s'; 
 		}elseif(get_locale() == 'ru_RU') {
- $text['home'] = 'Главная'; // текст ссылки "Главная"
- $text['category'] = 'Архив рубрики "%s"'; // текст для страницы рубрики
- $text['search'] = 'Результаты поиска по запросу "%s"'; // текст для страницы с результатами поиска
- $text['tag'] = 'Записи с тегом "%s"'; // текст для страницы тега
- $text['author'] = 'Статьи автора %s'; // текст для страницы автора
- $text['404'] = 'Ошибка 404'; // текст для страницы 404
- $text['page'] = 'Страница %s'; // текст 'Страница N'
- $text['cpage'] = 'Страница комментариев %s'; // текст 'Страница комментариев N'
+ $text['home'] = 'Главная';
+ $text['category'] = 'Архив рубрики "%s"';
+ $text['search'] = 'Результаты поиска по запросу "%s"';
+ $text['tag'] = 'Записи с тегом "%s"';
+ $text['author'] = 'Статьи автора %s'; 
+ $text['404'] = 'Ошибка 404';
+ $text['page'] = 'Страница %s';
+ $text['cpage'] = 'Страница комментариев %s';
 		}
 
- $delimiter = '›'; // разделитель между "крошками"
- $delim_before = '<span class="divider">'; // тег перед разделителем
- $delim_after = '</span>'; // тег после разделителя
- $show_home_link = 1; // 1 - показывать ссылку "Главная", 0 - не показывать
- $show_on_home = 0; // 1 - показывать "хлебные крошки" на главной странице, 0 - не показывать
- $show_title = 1; // 1 - показывать подсказку (title) для ссылок, 0 - не показывать
- $show_current = 1; // 1 - показывать название текущей страницы, 0 - не показывать
- $before = '<span class="current">'; // тег перед текущей "крошкой"
- $after = '</span>'; // тег после текущей "крошки"
- /* === КОНЕЦ ОПЦИЙ === */
+ $delimiter = '›';
+ $delim_before = '<span class="divider">';
+ $delim_after = '</span>';
+ $show_home_link = 1;
+ $show_on_home = 0;
+ $show_title = 1;
+ $show_current = 1; 
+ $before = '<span class="current">'; 
+ $after = '</span>';
 
  global $post;
  $home_link = home_url('/');

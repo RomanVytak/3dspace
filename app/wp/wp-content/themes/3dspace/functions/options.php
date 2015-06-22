@@ -6,14 +6,10 @@ function additional_mime_types( $mimes ) {
 	return $mimes;
 }
 add_filter( 'upload_mimes', 'additional_mime_types' );
-// Створити користувацьке меню
 add_action('admin_menu', 'omr_create_menu');
 function omr_create_menu() {
-//Створити нове меню верхнього рівня
 add_menu_page('Налаштування головної сторінки', '.Main options', 'administrator', 
 __FILE__, 'omr_settings_page', ''.get_bloginfo('stylesheet_directory').'/functions/ico.png');
-
-//виклик функції register settings
 add_action( 'admin_init', 'register_mysettings' );
 }
 
