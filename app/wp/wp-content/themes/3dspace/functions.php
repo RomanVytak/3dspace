@@ -5,9 +5,9 @@
 			'menu_head' => __('Header navigation'),
 		));
 	}
-require_once(TEMPLATEPATH . '/functions/options.php');
+/*require_once(TEMPLATEPATH . '/functions/options.php');
 require_once(TEMPLATEPATH . '/functions/post-type.php');
-require_once(TEMPLATEPATH . '/functions/extra-fields.php');
+require_once(TEMPLATEPATH . '/functions/extra-fields.php');*/
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
 add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 add_filter('pre_site_transient_update_core',create_function('$a', "return null;"));
@@ -139,6 +139,8 @@ function dimox_breadcrumbs() {
  if ($show_current == 1) echo $before . get_the_title() . $after;
  }
  }
+
+ // custom post type
  } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
  $post_type = get_post_type_object(get_post_type());
  if ( get_query_var('paged') ) {
@@ -146,6 +148,7 @@ function dimox_breadcrumbs() {
  } else {
  if ($show_current == 1) echo $delimiter . $before . $post_type->label . $after;
  }
+
  } elseif ( is_attachment() ) {
  if ($show_home_link == 1) echo $delimiter;
  $parent = get_post($parent_id);
@@ -203,6 +206,7 @@ function dimox_breadcrumbs() {
 
  }
 }
+/* Обрізка цитати і закінчення [...] */
 function improved_trim_excerpt($text) {
 	global $post;
 	if ( '' == $text ) {
@@ -223,6 +227,7 @@ function improved_trim_excerpt($text) {
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'improved_trim_excerpt');
+/*Визначити url завантаженої сторінки*/
 function request_url(){
 	$result = '';
 	$default_port = 80;
