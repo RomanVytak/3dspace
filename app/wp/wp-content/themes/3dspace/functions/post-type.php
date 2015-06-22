@@ -107,7 +107,7 @@ function my_updated_messages( $messages ) {
    return $messages;
 }
  add_filter( 'post_updated_messages', 'my_updated_messages' );
- // категорії для Testimonial
+
 function my_taxonomies_portfolio() {
    $labels = array(
      'name'              => _x( 'Категорії проектів', 'taxonomy general name' ),
