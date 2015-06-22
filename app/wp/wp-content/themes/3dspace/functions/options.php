@@ -22,17 +22,14 @@ function mytheme_add_init() {
 add_action( 'admin_print_styles', 'mytheme_add_init' );
 
 function register_mysettings() {
-/*загальні налаштування*/
 register_setting( 'omr-settings-group', 'ok_ga_code' );
 register_setting( 'omr-settings-group', 'ok_facebook' );
 register_setting( 'omr-settings-group', 'ok_tweet' );
 register_setting( 'omr-settings-group', 'ok_vk' );
-/*ukraine options*/
 register_setting( 'omr-settings-group', 'ok_slider_text_ua' );
 register_setting( 'omr-settings-group', 'ok_underslider_text_ua' );
 register_setting( 'omr-settings-group', 'ok_home_content_title_ua' );
 register_setting( 'omr-settings-group', 'ok_home_content_ua' );
-/*russian options*/
 register_setting( 'omr-settings-group', 'ok_slider_text_ru' );
 register_setting( 'omr-settings-group', 'ok_underslider_text_ru' );
 register_setting( 'omr-settings-group', 'ok_home_content_title_ru' );
@@ -42,7 +39,6 @@ function omr_settings_page() {
 ?>
 <div class="wrap">
 <h1>Загальні налаштування</h1>
-
 <form method="post" action="options.php">
 <?php settings_fields('omr-settings-group'); ?>
 <div class="rm_section">
@@ -103,7 +99,6 @@ function omr_settings_page() {
 		</div>
 	</div>
 </div>
-
 <div class="rm_section">
 	<div class="rm_title">
 		<h3><img src="<?php bloginfo('stylesheet_directory'); ?>/functions/3.gif" class="inactive" alt=""/>

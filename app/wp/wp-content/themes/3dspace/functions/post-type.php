@@ -1,6 +1,5 @@
-<?
-
- add_action( 'init', 'my_custom_post_slide' );
+<?php
+add_action( 'init', 'my_custom_post_slide' );
 function my_custom_post_slide() {
    $labels = array(
      'name'               => _x( 'Slides', 'post type general name' ),
@@ -29,7 +28,6 @@ function my_custom_post_slide() {
    register_post_type( 'slide', $args );
    flush_rewrite_rules(false);
 }
-/**/
 add_action( 'init', 'my_custom_post_partners' );
 function my_custom_post_partners() {
    $labels = array(
@@ -59,7 +57,6 @@ function my_custom_post_partners() {
    register_post_type( 'partners', $args );
    flush_rewrite_rules(false);
 }
-/**/
 add_action( 'init', 'my_custom_post_portfolio' );
 function my_custom_post_portfolio() {
    $labels = array(
@@ -107,7 +104,6 @@ function my_updated_messages( $messages ) {
    return $messages;
 }
  add_filter( 'post_updated_messages', 'my_updated_messages' );
-
 function my_taxonomies_portfolio() {
    $labels = array(
      'name'              => _x( 'Категорії проектів', 'taxonomy general name' ),
@@ -128,5 +124,5 @@ function my_taxonomies_portfolio() {
    );
    register_taxonomy( 'portfolio_category', 'portfolio', $args );
 }
- add_action( 'init', 'my_taxonomies_portfolio', 0 );
+add_action( 'init', 'my_taxonomies_portfolio', 0 );
 ?>

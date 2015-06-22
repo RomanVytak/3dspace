@@ -1,17 +1,16 @@
-<?
-/*================================================= post EXTRA FIELDS =============================================================*/
+<?php
 add_action('admin_init', 'post_extra_fields', 1);
 function post_extra_fields(){
 add_meta_box('extra_fields', 'Options', 'post_extra_fields_box_func', 'post', 'normal', 'high');
 }
-function post_extra_fields_box_func($post){?>
+function post_extra_fields_box_func($post){ ?>
 	<p>
 		<label for="upload_image">Background image</label><br/>
 		<input id="upload_image" type="text" size="90" name="extra[background_image]" value="<?php echo get_post_meta($post->ID, 'background_image', true); ?>" />
 		<input class="upload_image_button" type="button" value="Upload" /><br/>
 	</p>
 <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
-<?}
+<?php }
 add_action('save_post', 'post_extra_fields_update', 0);
 function post_extra_fields_update($post_id){
 if (!wp_verify_nonce($_POST['extra_fields_nonce'], __FILE__))return false;
@@ -26,8 +25,6 @@ update_post_meta($post_id, $key, $value);
 }
 return $post_id;
 }
-/*================================================= END post EXTRA FIELDS =============================================================*/
-/*================================================= slide EXTRA FIELDS =============================================================*/
 add_action('admin_init', 'slide_extra_fields', 1);
 function slide_extra_fields(){
 add_meta_box('extra_fields', 'Options', 'slide_extra_fields_box_func', 'slide', 'normal', 'high');
@@ -39,7 +36,7 @@ function slide_extra_fields_box_func($post){?>
 		<input class="upload_image_button" type="button" value="Upload" /><br/>
 	</p>
 <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
-<?}
+<?php }
 add_action('save_post', 'slide_extra_fields_update', 0);
 function slide_extra_fields_update($post_id){
 if (!wp_verify_nonce($_POST['extra_fields_nonce'], __FILE__))return false;
@@ -54,8 +51,6 @@ update_post_meta($post_id, $key, $value);
 }
 return $post_id;
 }
-/*================================================= END slide EXTRA FIELDS =============================================================*/
-/*================================================= portfolio EXTRA FIELDS =============================================================*/
 add_action('admin_init', 'portfolio_extra_fields', 1);
 function portfolio_extra_fields(){
 add_meta_box('extra_fields', 'Options', 'portfolio_extra_fields_box_func', 'portfolio', 'normal', 'high');
@@ -107,7 +102,7 @@ function portfolio_extra_fields_box_func($post){?>
 		<input class="upload_image_button" type="button" value="Upload" /><br/>
 	</p>
 <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
-<?}
+<?php }
 add_action('save_post', 'portfolio_extra_fields_update', 0);
 function portfolio_extra_fields_update($post_id){
 if (!wp_verify_nonce($_POST['extra_fields_nonce'], __FILE__))return false;
@@ -122,9 +117,6 @@ update_post_meta($post_id, $key, $value);
 }
 return $post_id;
 }
-/*================================================= END portfolio EXTRA FIELDS =============================================================*/
-
-
 function upload_scripts() {
 	wp_enqueue_script('media-upload');
 	wp_enqueue_script('thickbox');

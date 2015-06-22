@@ -5,9 +5,6 @@
 			'menu_head' => __('Header navigation'),
 		));
 	}
-require_once(TEMPLATEPATH . '/functions/options.php');
-require_once(TEMPLATEPATH . '/functions/post-type.php');
-require_once(TEMPLATEPATH . '/functions/extra-fields.php');
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
 add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 add_filter('pre_site_transient_update_core',create_function('$a', "return null;"));
@@ -33,7 +30,6 @@ function wp_pagination() {
          echo '</ul>';
      }
 }
-
 function dimox_breadcrumbs() {
  if(get_locale() == 'uk') {
  $text['home'] = 'Головна'; 
@@ -54,7 +50,6 @@ function dimox_breadcrumbs() {
  $text['page'] = 'Страница %s';
  $text['cpage'] = 'Страница комментариев %s';
 		}
-
  $delimiter = '›';
  $delim_before = '<span class="divider">';
  $delim_after = '</span>';
@@ -64,7 +59,6 @@ function dimox_breadcrumbs() {
  $show_current = 1; 
  $before = '<span class="current">'; 
  $after = '</span>';
-
  global $post;
  $home_link = home_url('/');
  $link_before = '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
@@ -142,8 +136,6 @@ function dimox_breadcrumbs() {
  if ($show_current == 1) echo $before . get_the_title() . $after;
  }
  }
-
- // custom post type
  } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
  $post_type = get_post_type_object(get_post_type());
  if ( get_query_var('paged') ) {
@@ -151,7 +143,6 @@ function dimox_breadcrumbs() {
  } else {
  if ($show_current == 1) echo $delimiter . $before . $post_type->label . $after;
  }
-
  } elseif ( is_attachment() ) {
  if ($show_home_link == 1) echo $delimiter;
  $parent = get_post($parent_id);
@@ -209,7 +200,6 @@ function dimox_breadcrumbs() {
 
  }
 }
-/* Обрізка цитати і закінчення [...] */
 function improved_trim_excerpt($text) {
 	global $post;
 	if ( '' == $text ) {
@@ -230,7 +220,6 @@ function improved_trim_excerpt($text) {
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'improved_trim_excerpt');
-/*Визначити url завантаженої сторінки*/
 function request_url(){
 	$result = '';
 	$default_port = 80;
@@ -247,4 +236,7 @@ function request_url(){
 	$result .= $_SERVER['REQUEST_URI'];
 	return $result;
 }
+require_once(TEMPLATEPATH . '/functions/options.php');
+require_once(TEMPLATEPATH . '/functions/post-type.php');
+require_once(TEMPLATEPATH . '/functions/extra-fields.php');
 ?>
