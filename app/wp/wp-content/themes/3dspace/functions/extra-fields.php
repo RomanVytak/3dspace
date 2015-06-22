@@ -110,9 +110,11 @@ if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return false;
 if (!current_user_can('edit_post', $post_id)) return false;
 if (!isset($_POST['extra'])) return false;
 $_POST['extra'] = array_map('trim', $_POST['extra']);
-foreach($_POST['extra'] as $key=>$value){
-if(empty($value))
-continue delete_post_meta($post_id, $key);
+foreach( $_POST['extra'] as $key=>$value ){
+if(empty($value)){
+delete_post_meta($post_id, $key);
+continue;
+}
 update_post_meta($post_id, $key, $value);
 }
 return $post_id;
