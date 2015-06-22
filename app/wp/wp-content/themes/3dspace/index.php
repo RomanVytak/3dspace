@@ -1,15 +1,15 @@
-<?get_header();?> 
+<?php get_header();?> 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     
-	<?if(get_post_meta($post->ID, 'background_image', true) != ''){?>
-	<div class="top-image" style="background: url('<? echo get_post_meta($post->ID, 'background_image', true);?>')"></div>
-	<? }else {?>
-	<div class="top-image" style="background: url('<? bloginfo('stylesheet_directory');?>/pictures/slider/finish.jpg')"></div>
-	<? } ?>
+	<?php if(get_post_meta($post->ID, 'background_image', true) != ''){?>
+	<div class="top-image" style="background: url('<?php echo get_post_meta($post->ID, 'background_image', true);?>')"></div>
+	<?php }else {?>
+	<div class="top-image" style="background: url('<?php bloginfo('stylesheet_directory');?>/pictures/slider/finish.jpg')"></div>
+	<?php } ?>
     
     <div class="row title-page">
         <div class="columns large-12">
-            <h1><?the_title();?></h1>
+            <h1><?php the_title();?></h1>
         </div> 
     </div>
     
@@ -21,7 +21,7 @@
 					<?php } ?> 
 
         <div class="columns large-12 item">
-            <?the_content();?>
+            <?php the_content();?>
         </div>
         
     </div>
@@ -31,13 +31,13 @@
     
     <div class="row title-page">
         <div class="columns large-12">
-            <h1><? if(get_locale() == 'uk') {?>Помилка 404<? }elseif(get_locale() == 'ru_RU') { ?>Ошибка 404<? } ?></h1>
+            <h1><?php if(get_locale() == 'uk') {?>Помилка 404<?php }elseif(get_locale() == 'ru_RU') { ?>Ошибка 404<?php } ?></h1>
         </div> 
     </div>
 <div class="row content-holder content-text">
 	<div class="columns large-12 item">
-        <p><? if(get_locale() == 'uk') {?>Вибачте, такої сторінки не існує.<? }elseif(get_locale() == 'ru_RU') { ?>Простите, такой страницы не существует.<? } ?></p>  
+        <p><?php if(get_locale() == 'uk') {?>Вибачте, такої сторінки не існує.<?php }elseif(get_locale() == 'ru_RU') { ?>Простите, такой страницы не существует.<?php } ?></p>  
     </div>        
 </div>
 <?php endif; ?>
-<?get_footer();?>
+<?php get_footer();?>

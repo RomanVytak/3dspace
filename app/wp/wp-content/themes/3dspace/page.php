@@ -1,16 +1,16 @@
-<?get_header();?> 
+<?php get_header();?> 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     
-	<?$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
-	<? if($url != '') {?>
-	<div class="top-image" style="background: url('<?=$url;?>')"></div>
-	<? } else {?>	
+	<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
+	<?php if($url != '') {?>
+	<div class="top-image" style="background: url('<?php echo $url;?>')"></div>
+	<?php } else {?>	
 	<div class="top-image" style="background: url('<?php bloginfo('stylesheet_directory'); ?>/pictures/slider/finish.jpg')"></div>
-	<? } ?>
+	<?php } ?>
     
     <div class="row title-page">
         <div class="columns large-12">
-            <h1><?the_title();?></h1>
+            <h1><?php the_title();?></h1>
         </div> 
     </div>
     
@@ -19,7 +19,7 @@
 <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 
         <div class="columns large-12 item">
-            <?the_content();?>
+            <?php the_content();?>
         </div>
         
     </div>
@@ -38,4 +38,4 @@
     </div>        
 </div>
 <?php endif; ?>
-<?get_footer();?>
+<?php get_footer();?>

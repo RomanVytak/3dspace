@@ -1,9 +1,9 @@
-<?get_header();?>
+<?php get_header();?>
 <?php include('slider.php'); ?>
 <!--start text-->
 <div class="row start-block">
     <div class="columns large-12">
-        <p><?
+        <p><?php
 		if(get_locale() == 'uk') {
 			if(get_option('ok_underslider_text_ua') != ""){ echo "".get_option('ok_underslider_text_ua').""; }
 		}elseif(get_locale() == 'ru_RU') {
@@ -23,18 +23,18 @@ $args = array( 'numberposts' => 4, 'category' => 2 );
 $myposts = get_posts( $args );
 $i = 0;
 foreach( $myposts as $post ) : setup_postdata($post); $i ++ ?>
-    <div class="columns large-3 item item-<?=$i;?>">
+    <div class="columns large-3 item item-<?php echo $i;?>">
         <div class="wrapper">
             <div class="wrapper-face">
                 <div class="top-text">
-                    <h2><?the_title();?></h2>
+                    <h2><?php the_title();?></h2>
                 </div>
-				<?$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
-                <div class="image" style="background:url('<?=$url;?>');"></div>
+				<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
+                <div class="image" style="background:url('<?php echo $url; ?>');"></div>
             </div>
-            <div class="wrapper-back image" style="background:url('<?=$url;?>');">
+            <div class="wrapper-back image" style="background:url('<?php echo $url;?>');">
 				<?php the_excerpt(); ?>	
-                <a href="<?the_permalink();?>" class="button">Детальніше</a>
+                <a href="<?php the_permalink();?>" class="button">Детальніше</a>
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@ foreach( $myposts as $post ) : setup_postdata($post); $i ++ ?>
 <div class="home-content-holder">
     <div class="row">
         <div class="columns large-12">
-            <?
+            <?php
 		if(get_locale() == 'uk') {
 			if(get_option('ok_home_content_title_ua') != ""){ echo "<h2>".get_option('ok_home_content_title_ua')."</h2>"; }
 			if(get_option('ok_home_content_title_ua') != ""){ echo "".get_option('ok_home_content_ua').""; }
@@ -63,7 +63,7 @@ foreach( $myposts as $post ) : setup_postdata($post); $i ++ ?>
 
 <div class="row partners">
     <div class="columns large-12">
-        <h2><? if(get_locale() == 'uk') {?>Наші партнери<?}elseif(get_locale() == 'ru_RU') {?>Наши партнеры<?}?></h2>
+        <h2><?php if(get_locale() == 'uk') {?>Наші партнери<?php }elseif(get_locale() == 'ru_RU') {?>Наши партнеры<?php } ?></h2>
         <div class="logos-wrapper">
 <?php
 global $post;
@@ -76,4 +76,4 @@ foreach( $myposts as $post ) : setup_postdata($post);?>
         </div>
     </div>
 </div>
-<?get_footer();?>
+<?php get_footer();?>

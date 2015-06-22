@@ -11,11 +11,11 @@
     </div>
 </div>     
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/build/index.min.js"></script>
-<?if ( is_singular( 'portfolio' ) ) {?>
+<?php if ( is_singular( 'portfolio' ) ) {?>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jssor.js"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jssor.slider.js"></script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jssor.ssetings.js"></script>
-<?}?>
+<?php } ?>
     <script>
         $(document).ready(function(){
             var options = {
