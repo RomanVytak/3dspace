@@ -10,6 +10,11 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
         font-family: $body-font-family-text;
 }
+
+html {
+    margin-top: 0!important;
+}
+
 h1,
 h2,
 h3,
@@ -26,7 +31,9 @@ a {
 }
 
 
-
+#wpadminbar {
+    display: none;
+}
 
 
 
