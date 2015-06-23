@@ -21,7 +21,7 @@
       
         <div class="wrapper">
             <div class="columns large-12">
-                <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1104px; height: 556px; background: #191919; overflow: hidden;">
+                <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1104px; height: 736px; background: #191919; overflow: hidden;">
 
 					<!-- Loading Screen -->
 					<div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -34,7 +34,7 @@
 					</div>
 
 					<!-- Slides Container -->
-					<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:1104px; height: 456px; overflow: hidden;">
+					<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:1104px; height: 636px; overflow: hidden;">
 						<?php if(get_post_meta($post->ID, 'main_image', true) != ""){?>
 						<div>
 							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'main_image', true).""; ?>" />
