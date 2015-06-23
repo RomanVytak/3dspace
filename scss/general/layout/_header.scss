@@ -65,11 +65,23 @@ header {
     .language {
         height: 100%;
         text-align: right;
+        ul {
+            margin: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                &.active {
+                    a {
+                        color: $color-2;
+                    }
+                }
+            }
+        }
         > div {
             height: 100%;
         }
         a {
-            display: inline-block;
+            display: block;
             color: #fff;
             font-size: 16px;
             text-decoration: none;
@@ -79,7 +91,7 @@ header {
             font-family: $body-font-family-title;
             transition: all .3s;
             line-height: 77px;
-            &:hover, &.active {
+            &:hover {
                 color: $color-2;
             }
         }

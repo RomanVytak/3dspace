@@ -59,7 +59,7 @@ jQuery(document).ready(function ($) {
 
                 $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
                 $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-                $SlideDuration: 1012,                                //Specifies default duration (swipe) for slide in milliseconds
+                $SlideDuration: 800,                                //Specifies default duration (swipe) for slide in milliseconds
 
                 $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
                     $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow

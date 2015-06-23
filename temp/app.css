@@ -1662,10 +1662,17 @@ header {
   header .language {
     height: 100%;
     text-align: right; }
+    header .language ul {
+      margin: 0;
+      list-style: none; }
+      header .language ul li {
+        display: inline-block; }
+        header .language ul li.active a {
+          color: #4ba363; }
     header .language > div {
       height: 100%; }
     header .language a {
-      display: inline-block;
+      display: block;
       color: white;
       font-size: 16px;
       text-decoration: none;
@@ -1675,7 +1682,7 @@ header {
       font-family: 'Roboto Condensed', sans-serif;
       transition: all 0.3s;
       line-height: 77px; }
-      header .language a:hover, header .language a.active {
+      header .language a:hover {
         color: #4ba363; }
 
 body {
