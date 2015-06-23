@@ -105,6 +105,11 @@ function portfolio_extra_fields_box_func($post){?>
 		<input id="upload_image" type="text" size="90" name="extra[image_9]" value="<?php echo get_post_meta($post->ID, 'image_9', true); ?>" />
 		<input class="upload_image_button" type="button" value="Upload" /><br/>
 	</p>
+	<p>
+		<label for="upload_image">Image 10</label><br/>
+		<input id="upload_image" type="text" size="90" name="extra[image_10]" value="<?php echo get_post_meta($post->ID, 'image_10', true); ?>" />
+		<input class="upload_image_button" type="button" value="Upload" /><br/>
+	</p>
 <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
 <?php }
 add_action('save_post', 'portfolio_extra_fields_update', 0);
