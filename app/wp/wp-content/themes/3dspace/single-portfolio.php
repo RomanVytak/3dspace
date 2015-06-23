@@ -89,6 +89,12 @@
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_9', true)."";?>" />
 						</div>
 						<?php }?>
+						<?php if(get_post_meta($post->ID, 'image_10', true) != ""){?>
+						<div>
+							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_10', true)."";?>" />
+							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_10', true)."";?>" />
+						</div>
+						<?php }?>
 					</div>
 					<!-- Arrow Left -->
 					<span u="arrowleft" class="jssora05l" style="top: 158px; left: 8px;">
