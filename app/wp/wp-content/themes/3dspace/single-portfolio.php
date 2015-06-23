@@ -37,61 +37,61 @@
 					<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:1104px; height: 456px; overflow: hidden;">
 						<?php if(get_post_meta($post->ID, 'main_image', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'main_image', true).""; ?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'main_image', true).""; ?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'main_image', true)."";?>" />
 						</div>
 						<?php }?>
 						<?php if(get_post_meta($post->ID, 'image_2', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_2', true)."";?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'image_2', true)."";?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_2', true)."";?>" />
 						</div>
 						<?php }?>
 						<?php if(get_post_meta($post->ID, 'image_3', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_3', true)."";?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'image_3', true)."";?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_3', true)."";?>" />
 						</div>
 						<?php }?>
 						<?php if(get_post_meta($post->ID, 'image_4', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_4', true)."";?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'image_4', true)."";?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_4', true)."";?>" />
 						</div>
 						<?php }?>
 						<?php if(get_post_meta($post->ID, 'image_5', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_5', true)."";?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'image_5', true)."";?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_5', true)."";?>" />
 						</div>
 						<?php }?>
 						<?php if(get_post_meta($post->ID, 'image_6', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_6', true)."";?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'image_6', true)."";?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_6', true)."";?>" />
 						</div>
 						<?php }?>
 						<?php if(get_post_meta($post->ID, 'image_7', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_7', true)."";?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'image_7', true)."";?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_7', true)."";?>" />
 						</div>
 						<?php }?>
 						<?php if(get_post_meta($post->ID, 'image_8', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_8', true)."";?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'image_8', true)."";?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_8', true)."";?>" />
 						</div>
 						<?php }?>
 						<?php if(get_post_meta($post->ID, 'image_9', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_9', true)."";?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'image_9', true)."";?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_9', true)."";?>" />
 						</div>
 						<?php }?>
 						<?php if(get_post_meta($post->ID, 'image_10', true) != ""){?>
 						<div>
-							<img u="image" src="<?php echo "".get_post_meta($post->ID, 'image_10', true)."";?>" />
+							<img class="autoimg" u="image" src="<?php echo "".get_post_meta($post->ID, 'image_10', true)."";?>" />
 							<img u="thumb" src="<?php echo "".get_post_meta($post->ID, 'image_10', true)."";?>" />
 						</div>
 						<?php }?>
