@@ -15,8 +15,9 @@
             a {
                 text-decoration: none;
                 display: inline-block;
-                font-size: 12px;
+                font-size: 14px;
                 color: #fff;
+                background: $color-2;
                 padding: 2px 16px;
                 margin: 0 1px;
                 &.indoor { background: $color-1; }

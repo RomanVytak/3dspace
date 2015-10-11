@@ -14,7 +14,7 @@
 						</div>
 					<?php } ?>        
         <div class="change-class">
-            <a href="/portfolio_category/dyzajn-ynterera/';" class="class-1"><?php if(get_locale() == 'uk') {?>Дизайн інтер'єру<?php }elseif(get_locale() == 'ru_RU') { ?>Дизайн интерьера<?php } ?></a>
+            <a href="/portfolio_category/dyzajn-ynterera/" class="class-1"><?php if(get_locale() == 'uk') {?>Дизайн інтер'єру<?php }elseif(get_locale() == 'ru_RU') { ?>Дизайн интерьера<?php } ?></a>
             <a href="/portfolio_category/dyzajn-eksterera/" class="class-2"><?php if(get_locale() == 'uk') {?>Дизайн екстер'єру<?php }elseif(get_locale() == 'ru_RU') { ?>Дизайн экстерьера<?php } ?></a>
             <a href="/portfolio_category/proekty-domov/" class="class-3"><?php if(get_locale() == 'uk') {?>Проекти будинків<?php }elseif(get_locale() == 'ru_RU') { ?>Проекты домов<?php } ?></a>
             <a href="/portfolio/" class="all active"><?php if(get_locale() == 'uk') {?>Всі проекти<?php }elseif(get_locale() == 'ru_RU') { ?>Все проекты<?php } ?></a>

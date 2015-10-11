@@ -9,7 +9,7 @@
             width: 100%;
             height: 100%;
             transition: all .4s ease;
-            transform: perspective(1000px) rotateY(0deg) translateZ(0);
+            transform: perspective(1000px) rotateY(0deg);
             > div {
                 position: absolute;
                 top: 0;
@@ -37,7 +37,7 @@
         }
         .wrapper-back {
             opacity: 0;
-            transform: perspective(1000px) rotateY(180deg) translateZ(0);
+            transform: perspective(1000px) rotateY(180deg);
             padding: 8px 24px;
             color: #fff;
             &:after {
@@ -71,7 +71,7 @@
         // hover
         &:hover {
             .wrapper {
-                transform: perspective(1000px) rotateY(180deg) translateZ(0);
+                transform: perspective(1000px) rotateY(180deg);
             }
             .wrapper-face {
                 opacity: 0;

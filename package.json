@@ -22,7 +22,11 @@
     "svgo": "~0.4.4",
     "grunt-ftp-deploy": "~0.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-dev-update": "^1.3.0",
+    "grunt-sass": "^0.6.1",
+    "grunt-version": "^1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -14,3 +14,16 @@ RewriteRule . /3dspace/app/wp/index.php [L]
 </IfModule>
 
 # END WordPress
+
+<IfModule mod_security.c>
+<Files async-upload.php>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</Files>
+</IfModule>
+<IfModule mod_security.c>
+<Files upload.php>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</Files>
+</IfModule>
